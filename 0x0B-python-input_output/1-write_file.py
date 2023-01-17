@@ -1,14 +1,18 @@
 #!/usr/bin/python3
-"""
-This file contains function that
-writes a string to text file and returns
-number of characters written
-"""
+""" Module containing a function that writes to a file """
 
 
 def write_file(filename="", text=""):
     """
-    function to write to files
+    Function that writes to a text file.
+
+    Args:
+        filename: filename
+        text: text to write
+
+    Raises:
+        Exception: when the file can be opened
     """
-    with open(filename, mode="w", encoding="utf-8") as myFile:
-        return (myFile.write(str(text)))
+
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
