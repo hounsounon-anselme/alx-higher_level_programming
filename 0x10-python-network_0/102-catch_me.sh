@@ -1,3 +1,4 @@
 #!/bin/bash
-# Script that makes a request to causes an specific response
-curl -sL 0.0.0.0:5000/catch_me_3 -X PUT -H "Origin:HolbertonSchool"
+
+# Make a POST request to 0.0.0.0:5000/catch_me with a specific user agent
+curl -sX PUT -H "Origin: HolbertonSchool" -d "user_id=98" "0.0.0.0:5000/catch_me"
