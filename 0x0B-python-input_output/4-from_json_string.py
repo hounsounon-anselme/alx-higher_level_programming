@@ -1,17 +1,10 @@
 #!/usr/bin/python3
-""" Return an object by a JSON representation """
+"""4. From JSON string to Object"""
+
 import json
 
 
 def from_json_string(my_str):
-    """
-    Return an object by a JSON representation.
+    """A function that returns an object represented by a JSON string"""
 
-    Args:
-        my_str: JSON representation
-
-    Raises:
-        Exception: when the string can't be decoded
-    """
-
-    return json.loads(my_str)
+    return (json.loads(my_str))
