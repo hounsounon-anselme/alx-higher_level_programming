@@ -1,8 +1,7 @@
 #!/usr/bin/node
-// executes x times a function.
+// A function that executes x times a function
 
 exports.callMeMoby = function (x, theFunction) {
-    for (let i = 0; i < x; i++) {
-      theFunction();
-    }
-  };
+  let i = 0;
+  for (i = 0; i < x; i++) theFunction();
+};
