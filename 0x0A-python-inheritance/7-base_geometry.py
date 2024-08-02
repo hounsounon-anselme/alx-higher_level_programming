@@ -1,26 +1,23 @@
 #!/usr/bin/python3
-"""
-This module contains a class
-with public instance and Raises
-exception when required
-"""
+"""7. Integer validator"""
 
 
 class BaseGeometry:
-    """
-    class Base has 2 public instances
-    """
+    """Class BaseGeometry (based on 5-base_geometry.py)"""
+
     def area(self):
-        """
-        function that raises exception
-        """
+        """Function that computes area (not implemented yet)"""
+
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """
-        function that validates value
+        Function that validates name & value
+        Raises TypeError & ValueError if not int or positive resp.
         """
+
         if type(value) is not int:
-            raise TypeError("{:s} must be an integer".format(name))
+            raise TypeError("{} must be an integer".format(name))
+
         if value <= 0:
-            raise ValueError("{:s} must be greater than 0".format(name))
+            raise ValueError("{} must be greater than 0".format(name))

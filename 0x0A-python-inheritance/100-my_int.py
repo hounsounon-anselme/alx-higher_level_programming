@@ -1,22 +1,16 @@
 #!/usr/bin/python3
-"""
-This modules contains a class
-that inherits from int
-"""
+"""12. My integer"""
 
 
 class MyInt(int):
-    """
-    responds opposite to == and !=
-    """
-    def __eq__(self, other):
-        """
-        returns opposite of equal
-        """
-        return (not super().__eq__(other))
+    """Class MyInt that inherits from int"""
 
-    def __ne__(self, other):
-        """
-        returns opposite of not equal
-        """
-        return (not super().__ne__(other))
+    def __eq__(self, value):
+        """Function that inverts == operation"""
+
+        return (self.real != value)
+
+    def __ne__(self, value):
+        """Function that inverts != operation"""
+
+        return (self.real == value)

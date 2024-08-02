@@ -1,52 +1,33 @@
 #!/usr/bin/python3
-"""
-This module contains a class
-with public instance and Raises
-exception when required
-"""
+"""9. Full rectangle"""
 
 
-class BaseGeometry:
-    """
-    class Base has 2 public instances
-    """
-    def area(self):
-        """
-        function that raises exception
-        """
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """
-        function that validates value
-        """
-        if not isinstance(value, int):
-            raise TypeError("{:s} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{:s} must be greater than 0".format(name))
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """
-    class Rectangle with private height and width
+    A class Rectangle that inherits from BaseGeometry (7-base_geometry.py).
+    (task based on 8-rectangle.py)
     """
+
     def __init__(self, width, height):
-        """
-        instantiation of class
-        """
+        """A function that initializes width and height"""
+
         self.integer_validator("width", width)
         self.__width = width
+
         self.integer_validator("height", height)
         self.__height = height
 
     def area(self):
-        """
-        returns area of a rectangle
-        """
+        """Function that computes area of a rectangle"""
+
         return (self.__width * self.__height)
 
     def __str__(self):
-        """
-        string representation of the rectangle
-        """
-        return("[Rectangle] {:d}/{:d}".format(self.__width, self.__height))
+        """print() to print & str() to return: [Rectangle] <width>/<height>"""
+
+        description = "[" + str(self.__class__.__name__) + "] "
+        description += str(self.__width) + "/" + str(self.__height)
+        return (description)
