@@ -1,8 +1,5 @@
-The ``4-print_square`` module
-============================
-
-Using ``print_square``
----------------------
+# 4-print_square.txt
+# Run: python3 -m doctest -v ./tests/4-print_square.txt
 
 Importing function from the module:
 
@@ -16,7 +13,7 @@ Printing a square with a size of 5
     #####
     #####
     #####
-
+ 
 Passing 0 as the size of the square
 
     >>> print_square(0)
@@ -55,3 +52,9 @@ Missing argument
    Traceback (most recent call last):
    	     ...
    TypeError: print_square() missing 1 required positional argument: 'size'
+
+Test extra args:
+     >>> print_square(1, 2)
+     Traceback (most recent call last):
+     ...
+     TypeError: print_square() takes 1 positional argument but 2 were given
